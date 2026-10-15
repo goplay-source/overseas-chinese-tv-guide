@@ -1,0 +1,28 @@
+title: Overseas Chinese TV Guide
+tagline: Honest, paid-by-our-wallet guides for Chinese-speaking families abroad
+description: >-
+  Step-by-step setup guides for watching Chinese TV (CCTV, Phoenix, TVB, regional)
+  in the US, Canada, UK, Australia. Real 2026 prices, real player setup, no marketing.
+keywords: chinese tv abroad, cctv5 usa, phoenix tv overseas, tvb jade tivimate, m3u subscription, ky lintv
+author: goplay-source
+lang: en
+url: https://username.github.io
+baseurl: /overseas-chinese-tv-guide
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+defaults:
+  - scope: { path: "" }
+    values:
+      layout: "default"
+      show_in_nav: true
+paginate: 10
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md

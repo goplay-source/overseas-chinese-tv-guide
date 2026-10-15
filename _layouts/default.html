@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+      <nav class="site-nav">
+        <a class="page-link" href="{{ '/archive/' | relative_url }}">Archive</a>
+        <a class="page-link" href="https://github.com/{{ site.author | default: 'goplay-source' }}/overseas-chinese-tv-guide#commercial-services" target="_blank" rel="noopener">Commercial services</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>This site is a personal project, not affiliated with any TV station or service mentioned.</p>
+      <p>Prices and features on this site come from each service's public page as of October 2026 and may change at any time.</p>
+    </div>
+  </footer>
+</body>
+</html>

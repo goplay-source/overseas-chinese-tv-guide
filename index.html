@@ -1,0 +1,27 @@
+---
+layout: default
+title: Home
+lang: en
+---
+<section class="home">
+  <h1>{{ site.title | escape }}</h1>
+  <p>{{ site.tagline | escape }}</p>
+  <p>Five long-tail guides covering the most common "Chinese TV abroad" questions: sports, Cantonese, Hong Kong dramas, Phoenix TV, and budget M3U subscriptions. Every guide is paid-by-our-wallet tested and rewritten in 2026.</p>
+
+  <h2>Latest guides</h2>
+  <ul class="post-list">
+    {%- for post in site.posts limit: 10 -%}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  <div class="commercial-services">
+    <h2>Commercial services</h2>
+    <p>This site does not sell subscriptions directly.</p>
+    <p>If you want to skip the manual M3U configuration described in every guide above, the author maintains a paid subscription service with a maintained Chinese channel list, auto-renewing link, and a 7-day trial. See the GitHub project home page for details.</p>
+    <p><a href="https://github.com/{{ site.author | default: 'goplay-source' }}/overseas-chinese-tv-guide#commercial-services" target="_blank" rel="noopener">View commercial services on GitHub &rarr;</a></p>
+  </div>
+</section>
