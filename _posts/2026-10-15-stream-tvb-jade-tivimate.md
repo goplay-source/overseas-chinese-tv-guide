@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 lang: en
 title: "How to stream TVB Jade on TiviMate: 2026 setup guide"
@@ -163,8 +163,20 @@ For households that want **fully compliant, no M3U**, use the TVB Anywhere+ offi
 
 ## 7. Commercial services
 
-This article does not sell any subscription service.
-
 If you want to skip the frequent failures of GitHub lists and the manual M3U configuration process, you can check the GitHub project home page (the **"Commercial services"** section in the `README`) for the author's paid subscription configuration: a maintained TVB Jade / Pearl / J2 channel list, auto-renewing subscription link, and a 7-day trial entry.
+
+> All prices and feature descriptions in this article come from each service's public page as of October 2026 and may change at any time. Confirm on the official website at the time of purchase.
+
+---
+
+## Try the author's setup
+
+If you want to skip the manual M3U configuration process described above, the author maintains a paid subscription service with a maintained Chinese channel list, auto-renewing subscription link, and a 7-day trial.
+
+**Try free for 7 days** — no payment required during the trial. After the trial, the service is **$9.99/month** (3-month minimum) or **$59.88/year** (save 50%).
+
+<p><a class="cta-button" href="https://iptv-search.com/login?tab=register&utm_source=github-pages&utm_medium=seo-article&utm_campaign=en-stream-tvb-jade-tivimate" target="_blank" rel="noopener">Try free for 7 days →</a></p>
+
+After registering, you will receive a subscription link and 7-day VIP trial automatically.
 
 > All prices and feature descriptions in this article come from each service's public page as of October 2026 and may change at any time. Confirm on the official website at the time of purchase.

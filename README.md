@@ -19,13 +19,13 @@ This site walks through each scenario step by step, with the real 2026 prices, r
 
 | Guide | Audience |
 |-------|----------|
-| [How to watch CCTV-5 in USA]({{ '/2026/10/15/how-to-watch-cctv5-usa-2026.html' | relative_url }}) | US-based Chinese families |
-| [Best Chinese TV for Cantonese speakers in Canada]({{ '/2026/10/15/best-iptv-cantonese-canada.html' | relative_url }}) | Cantonese-speaking elders in Toronto / Vancouver |
-| [How to stream TVB Jade on TiviMate]({{ '/2026/10/15/stream-tvb-jade-tivimate.html' | relative_url }}) | Hong Kong immigrants |
-| [Watch Phoenix TV abroad: M3U vs Sling vs KyLinTV]({{ '/2026/10/15/phoenix-tv-abroad-comparison.html' | relative_url }}) | Anyone who wants Phoenix Info News or Phoenix Chinese |
-| [Cheap M3U subscription 2026]({{ '/2026/10/15/cheap-m3u-subscription-2026.html' | relative_url }}) | Overseas Chinese on a budget |
+| [How to watch CCTV-5 in USA](https://goplay-source.github.io/overseas-chinese-tv-guide/2026/10/15/how-to-watch-cctv5-usa-2026.html) | US-based Chinese families |
+| [Best Chinese TV for Cantonese speakers in Canada](https://goplay-source.github.io/overseas-chinese-tv-guide/2026/10/15/best-iptv-cantonese-canada.html) | Cantonese-speaking elders in Toronto / Vancouver |
+| [How to stream TVB Jade on TiviMate](https://goplay-source.github.io/overseas-chinese-tv-guide/2026/10/15/stream-tvb-jade-tivimate.html) | Hong Kong immigrants |
+| [Watch Phoenix TV abroad: M3U vs Sling vs KyLinTV](https://goplay-source.github.io/overseas-chinese-tv-guide/2026/10/15/phoenix-tv-abroad-comparison.html) | Anyone who wants Phoenix Info News or Phoenix Chinese |
+| [Cheap M3U subscription 2026](https://goplay-source.github.io/overseas-chinese-tv-guide/2026/10/15/cheap-m3u-subscription-2026.html) | Overseas Chinese on a budget |
 
-Chinese versions of all five guides are also available in the [archive]({{ '/archive/' | relative_url }}).
+Chinese versions of all five guides are also available in the [archive](https://goplay-source.github.io/overseas-chinese-tv-guide/archive/).
 
 ## Site policies
 
@@ -33,7 +33,7 @@ Chinese versions of all five guides are also available in the [archive]({{ '/arc
 2. **All prices and feature descriptions** come from each service's public page as of October 2026 and may change.
 3. **No personal information** is collected on this site. There are no analytics scripts, no cookies, no tracking.
 
-## Commercial services
+## Try the author's setup
 
 This site is **not** a store. It does not sell subscriptions, boxes, or hardware.
 
@@ -43,7 +43,11 @@ If you want to skip the manual M3U configuration described in every guide above,
 - Auto-renewing subscription link
 - A 7-day trial entry to test the channel list before paying
 
-**To learn more, see the [iptv-search.com](https://iptv-search.com) website or contact the author via the GitHub issues page.**
+### Try free for 7 days →
+
+Sign up at **[iptv-search.com/register](https://iptv-search.com/login?tab=register&utm_source=github-pages&utm_medium=readme&utm_campaign=overseas-chinese-tv-guide)** to get a 7-day VIP trial automatically. No payment required during the trial.
+
+After the trial, the service is **$9.99/month** (3-month minimum) or **$59.88/year** (save 50%).
 
 > The author does not control the copyright status of any third-party content. Whether your personal viewing is legal depends on whether the M3U link's content has been authorized by the rights holder. This site does not evaluate any specific service's content source.
 
