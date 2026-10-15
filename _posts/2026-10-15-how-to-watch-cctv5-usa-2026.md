@@ -3,6 +3,7 @@ layout: post
 lang: en
 title: "How to watch CCTV-5 in USA: 2026 sports channel setup guide"
 date: 2026-10-15 09:00:00 +0800
+comments_id: how-to-watch-cctv5-usa-2026
 description: "Honest, paid-by-our-wallet guide for US-based Chinese families who want Chinese-language sports commentary."
 target: US-based Chinese families who want Chinese-language sports commentary
 ---

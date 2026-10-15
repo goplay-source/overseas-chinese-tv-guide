@@ -3,6 +3,7 @@ layout: post
 lang: zh-CN
 title: "2026 TiviMate 配置 TVB 翡翠台完整教程"
 date: 2026-10-15 09:00:00 +0800
+comments_id: zh-tvb-jade-tivimate-2026
 description: "港人移民想看 TVB 港剧综艺的诚实对比与配置指南。"
 target: 港人移民想看 TVB 港剧综艺
 ---

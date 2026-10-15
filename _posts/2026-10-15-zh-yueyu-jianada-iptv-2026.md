@@ -3,6 +3,7 @@ layout: post
 lang: zh-CN
 title: "2026 加拿大粤语用户中文电视方案对比"
 date: 2026-10-15 09:00:00 +0800
+comments_id: zh-yueyu-jianada-iptv-2026
 description: "多伦多/温哥华粤语老人的诚实对比与配置指南。"
 target: 多伦多/温哥华粤语老人
 ---

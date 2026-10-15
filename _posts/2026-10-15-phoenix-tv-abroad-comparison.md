@@ -3,6 +3,7 @@ layout: post
 lang: en
 title: "Watch Phoenix TV abroad: M3U vs Sling vs KyLinTV"
 date: 2026-10-15 09:00:00 +0800
+comments_id: phoenix-tv-abroad-comparison
 description: "Honest, paid-by-our-wallet guide for Overseas Chinese who want Phoenix Info News / Phoenix Chinese."
 target: Overseas Chinese who want Phoenix Info News / Phoenix Chinese
 ---

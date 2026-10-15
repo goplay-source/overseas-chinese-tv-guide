@@ -3,6 +3,7 @@ layout: post
 lang: en
 title: "How to stream TVB Jade on TiviMate: 2026 setup guide"
 date: 2026-10-15 09:00:00 +0800
+comments_id: stream-tvb-jade-tivimate
 description: "Honest, paid-by-our-wallet guide for Hong Kong immigrants who want TVB dramas and variety shows."
 target: Hong Kong immigrants who want TVB dramas and variety shows
 ---

@@ -3,6 +3,7 @@ layout: post
 lang: en
 title: "Cheap M3U subscription 2026: Chinese TV for overseas Chinese"
 date: 2026-10-15 09:00:00 +0800
+comments_id: cheap-m3u-subscription-2026
 description: "Honest, paid-by-our-wallet guide for Overseas Chinese who want Chinese TV on a budget."
 target: Overseas Chinese who want Chinese TV on a budget
 ---

@@ -26,3 +26,11 @@ exclude:
   - node_modules
   - vendor
   - README.md
+
+# Giscus comments (GitHub Discussions backend)
+# Enabled repo: goplay-source/overseas-chinese-tv-guide
+# Discussions must be ON and giscus GitHub App installed at https://github.com/apps/giscus
+giscus_repo: goplay-source/overseas-chinese-tv-guide
+giscus_repo_id: R_kgDOVKwyNg
+giscus_category: General
+giscus_category_id: DIC_kwDOVKwyNs4DIhtn

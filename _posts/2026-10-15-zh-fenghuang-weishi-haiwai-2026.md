@@ -3,6 +3,7 @@ layout: post
 lang: zh-CN
 title: "海外看凤凰卫视：M3U vs Sling vs KyLinTV 三方对比"
 date: 2026-10-15 09:00:00 +0800
+comments_id: zh-fenghuang-weishi-haiwai-2026
 description: "海外华人想看凤凰卫视资讯/中文的诚实对比与配置指南。"
 target: 海外华人想看凤凰卫视资讯/中文
 ---

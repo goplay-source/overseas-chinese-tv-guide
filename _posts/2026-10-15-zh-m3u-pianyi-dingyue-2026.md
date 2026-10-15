@@ -3,6 +3,7 @@ layout: post
 lang: zh-CN
 title: "2026 海外华人中文电视省钱方案：M3U 订阅完整对比"
 date: 2026-10-15 09:00:00 +0800
+comments_id: zh-m3u-pianyi-dingyue-2026
 description: "海外华人想省钱看中文电视的诚实对比与配置指南。"
 target: 海外华人想省钱看中文电视
 ---

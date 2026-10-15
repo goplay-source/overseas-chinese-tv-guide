@@ -3,6 +3,7 @@ layout: post
 lang: en
 title: "Best IPTV for Cantonese speakers in Canada: 2026 comparison"
 date: 2026-10-15 09:00:00 +0800
+comments_id: best-iptv-cantonese-canada
 description: "Honest, paid-by-our-wallet guide for Cantonese-speaking elders in Toronto / Vancouver."
 target: Cantonese-speaking elders in Toronto / Vancouver
 ---
