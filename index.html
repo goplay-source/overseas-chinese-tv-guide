@@ -3,28 +3,46 @@ layout: default
 title: Home
 lang: en
 ---
-<section class="home">
+<section class="home-hero">
   <h1>{{ site.title | escape }}</h1>
-  <p>{{ site.tagline | escape }}</p>
-  <p>Five long-tail guides covering the most common "Chinese TV abroad" questions: sports, Cantonese, Hong Kong dramas, Phoenix TV, and budget M3U subscriptions. Every guide is paid-by-our-wallet tested and rewritten in 2026.</p>
-
-  <h2>Latest guides</h2>
-  <ul class="post-list">
-    {%- for post in site.posts limit: 10 -%}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-    </li>
-    {%- endfor -%}
-  </ul>
-
-  <div class="commercial-services">
-    <h2>Skip the manual setup</h2>
-    <p>Every guide above tells you how to configure an M3U subscription yourself. If you would rather skip the manual steps, the author maintains a paid subscription service with a maintained Chinese channel list, auto-renewing subscription link, and a 7-day trial.</p>
-    <p><strong>Try free for 7 days</strong> — no payment required during the trial. After the trial, the service is $9.99/month (3-month minimum) or $59.88/year (save 50%).</p>
-    <p style="margin-top: 1.25rem;">
-      <a class="cta-button" href="https://iptv-search.com/login?tab=register&amp;utm_source=github-pages&amp;utm_medium=homepage&amp;utm_campaign=overseas-chinese-tv-guide" target="_blank" rel="noopener">Try free for 7 days &rarr;</a>
-    </p>
-    <p class="cta-note">After registering, you will receive a subscription link and 7-day VIP trial automatically.</p>
+  <p class="tagline">{{ site.tagline | escape }}</p>
+  <p class="lede">Five long-tail guides covering the most common "Chinese TV abroad" questions: sports, Cantonese, Hong Kong dramas, Phoenix TV, and budget M3U subscriptions. Every guide is paid-by-our-wallet tested and rewritten in 2026.</p>
+  <div class="cta-row">
+    <a class="cta-button primary" href="https://iptv-search.com/login?tab=register&amp;utm_source=github-pages&amp;utm_medium=homepage&amp;utm_campaign=overseas-chinese-tv-guide" target="_blank" rel="noopener">Try the setup free for 7 days</a>
+    <a class="cta-button ghost" href="#guides">Read the guides</a>
   </div>
 </section>
+
+<div class="section-title" id="guides">
+  <h2>Latest guides</h2>
+  <span class="section-count">{{ site.posts | size }} articles</span>
+</div>
+
+<div class="card-grid">
+  {%- assign sorted = site.posts | sort: 'date' | reverse -%}
+  {%- for post in sorted limit: 10 -%}
+  <a class="card" href="{{ post.url | relative_url }}">
+    <div class="card-meta">
+      {%- assign plang = post.lang | default: 'en' -%}
+      {%- if plang == 'zh' or plang == 'zh-CN' -%}
+        <span class="card-tag">中文</span>
+      {%- else -%}
+        <span class="card-tag">EN</span>
+      {%- endif -%}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    </div>
+    <h3>{{ post.title | escape }}</h3>
+    {%- if post.target -%}
+    <p class="card-excerpt">{{ post.target }}</p>
+    {%- endif -%}
+  </a>
+  {%- endfor -%}
+</div>
+
+<div class="cta-box">
+  <h2>Skip the manual setup</h2>
+  <p>Every guide above tells you how to configure an M3U subscription yourself. If you would rather skip the manual steps, the author maintains a paid subscription service with a maintained Chinese channel list, auto-renewing subscription link, and a 7-day trial.</p>
+  <p class="price-line"><strong>Try free for 7 days</strong> — no payment required during the trial. After the trial, the service is $9.99/month (3-month minimum) or $59.88/year (save 50%).</p>
+  <a class="cta-button" href="https://iptv-search.com/login?tab=register&amp;utm_source=github-pages&amp;utm_medium=homepage&amp;utm_campaign=overseas-chinese-tv-guide" target="_blank" rel="noopener">Try free for 7 days &rarr;</a>
+  <p class="cta-note">After registering, you will receive a subscription link and 7-day VIP trial automatically.</p>
+</div>

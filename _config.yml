@@ -8,7 +8,7 @@ author: goplay-source
 lang: en
 url: https://goplay-source.github.io
 baseurl: /overseas-chinese-tv-guide
-theme: minima
+# theme: minima   # disabled - using custom layout + style.css
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

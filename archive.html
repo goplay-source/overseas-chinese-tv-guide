@@ -5,11 +5,20 @@ permalink: /archive/
 lang: en
 ---
 <h1>Archive</h1>
-<ul class="post-list">
-  {%- for post in site.posts -%}
+<p style="color: var(--fg-soft);">All guides, newest first.</p>
+
+<ul class="archive-list">
+  {%- assign sorted = site.posts | sort: 'date' | reverse -%}
+  {%- for post in sorted -%}
   <li>
+    <span class="archive-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    {%- assign alang = post.lang | default: 'en' -%}
+    {%- if alang == 'zh' or alang == 'zh-CN' -%}
+      <span class="lang-badge zh">中文</span>
+    {%- else -%}
+      <span class="lang-badge en">EN</span>
+    {%- endif -%}
     <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
   </li>
   {%- endfor -%}
 </ul>

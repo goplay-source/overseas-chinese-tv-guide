@@ -5,14 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 <body>
   <header class="site-header">
     <div class="wrapper">
-      <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+      <a class="site-brand" rel="author" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="">
+        <span>{{ site.title | escape }}</span>
+      </a>
       <nav class="site-nav">
+        <a class="page-link" href="{{ '/' | relative_url }}">Home</a>
         <a class="page-link" href="{{ '/archive/' | relative_url }}">Archive</a>
+        <a class="page-link" href="{{ '/about/' | relative_url }}">About</a>
         <a class="page-link" href="https://github.com/{{ site.author | default: 'goplay-source' }}/overseas-chinese-tv-guide#commercial-services" target="_blank" rel="noopener">Commercial services</a>
       </nav>
     </div>
@@ -25,8 +31,30 @@
   <footer class="site-footer">
     <div class="wrapper">
       <p>This site is a personal project, not affiliated with any TV station or service mentioned.</p>
-      <p>Prices and features on this site come from each service's public page as of October 2026 and may change at any time.</p>
+      <p>Prices and features come from each service's public page as of October 2026 and may change.</p>
+      <p><a href="{{ '/about/' | relative_url }}">About this site</a> · <a href="https://github.com/{{ site.author }}/overseas-chinese-tv-guide" target="_blank" rel="noopener">Source on GitHub</a></p>
     </div>
   </footer>
+  {%- if page.comments_id -%}
+  {# Giscus: enable in giscus.app, then set env in _config.yml.
+     Repo: goplay-source/overseas-chinese-tv-guide
+     Discussions category must exist + giscus app installed. #}
+  <script src="https://giscus.app/client.js"
+          data-repo="goplay-source/overseas-chinese-tv-guide"
+          data-repo-id="{{ site.giscus_repo_id | default: 'PLACEHOLDER_REPO_ID' }}"
+          data-category="{{ site.giscus_category | default: 'General' }}"
+          data-category-id="{{ site.giscus_category_id | default: 'PLACEHOLDER_CATEGORY_ID' }}"
+          data-mapping="specific"
+          data-term="{{ page.comments_id }}"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+  {%- endif -%}
 </body>
 </html>

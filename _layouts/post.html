@@ -3,6 +3,12 @@ layout: default
 ---
 <article class="post">
   <header class="post-header">
+    {%- assign lang = page.lang | default: 'en' -%}
+    {%- if lang == 'zh' or lang == 'zh-CN' -%}
+      <span class="lang-badge zh">中文</span>
+    {%- else -%}
+      <span class="lang-badge en">EN</span>
+    {%- endif -%}
     <h1 class="post-title">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
@@ -11,7 +17,42 @@ layout: default
       {%- endif -%}
     </p>
   </header>
-  <div class="post-content">
-    {{ content }}
+  <div class="post-with-toc">
+    <aside class="post-toc" aria-label="Table of contents">
+      <div class="toc-title">On this page</div>
+      <ul id="toc-list"></ul>
+    </aside>
+    <div class="post-content">
+      {{ content }}
+    </div>
   </div>
+  {%- if page.comments_id -%}
+  <section class="comments-section">
+    <h2>Comments &amp; questions</h2>
+    <p style="color: var(--fg-soft); font-size: 0.9rem;">Sign in with GitHub to leave a comment. The author replies within 1-2 days.</p>
+  </section>
+  {%- endif -%}
 </article>
+<script>
+  // Build TOC from h2 / h3 inside .post-content
+  (function() {
+    var toc = document.getElementById('toc-list');
+    if (!toc) return;
+    var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+    if (headings.length === 0) {
+      var aside = document.querySelector('.post-toc');
+      if (aside) aside.style.display = 'none';
+      return;
+    }
+    headings.forEach(function(h, i) {
+      if (!h.id) h.id = 'h-' + i;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      if (h.tagName === 'H3') a.style.paddingLeft = '0.85rem';
+      li.appendChild(a);
+      toc.appendChild(li);
+    });
+  })();
+</script>
