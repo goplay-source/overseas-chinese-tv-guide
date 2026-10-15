@@ -53,16 +53,9 @@ After the trial, the service is **$9.99/month** (3-month minimum) or **$59.88/ye
 
 > The author does not control the copyright status of any third-party content. Whether your personal viewing is legal depends on whether the M3U link's content has been authorized by the rights holder. This site does not evaluate any specific service's content source.
 
-## Local development (for contributors only)
+## Local development
 
-The site is a standard Jekyll project. To preview locally:
-
-```bash
-bundle install
-bundle exec jekyll serve
-```
-
-Then open <http://localhost:4000/> in your browser. (Note: the `/overseas-chinese-tv-guide/` subpath only applies when served by GitHub Pages; the local dev server runs at the site root.)
+See [CONTRIBUTING.md](CONTRIBUTING.md) for Jekyll setup and preview instructions.
 
 ## License
 
