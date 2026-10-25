@@ -59,7 +59,7 @@ If you want to skip the manual M3U configuration described in every guide above,
 
 Sign up at **[iptv-search.com/register](https://iptv-search.com/login?tab=register&ref=taobao&utm_source=github-pages&utm_medium=readme&utm_campaign=overseas-chinese-tv-guide)** to get a 7-day VIP trial automatically. No payment required during the trial.
 
-After the trial, the service is **$9.99/month** (3-month minimum) or **$59.88/year** (save 50%).
+After the trial, the service continues as a regular paid subscription.
 
 > The author does not control the copyright status of any third-party content. Whether your personal viewing is legal depends on whether the M3U link's content has been authorized by the rights holder. This site does not evaluate any specific service's content source.
 

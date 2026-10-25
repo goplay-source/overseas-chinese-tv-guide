@@ -146,7 +146,7 @@ Public GitHub lists are for ad-hoc testing only. KyLinTV does not explicitly inc
 
 If you want to skip the manual M3U configuration process described above, the author maintains a paid subscription service with a maintained Chinese channel list, auto-renewing subscription link, and a 7-day trial.
 
-**Try free for 7 days** — no payment required during the trial. After the trial, the service is **$9.99/month** (3-month minimum) or **$59.88/year** (save 50%).
+**Try free for 7 days** — no payment required during the trial. After the trial, the service continues as a regular paid subscription.
 
 <p><a class="cta-button" href="https://iptv-search.com/login?tab=register&ref=taobao&utm_source=github-pages&utm_medium=seo-article&utm_campaign=en-phoenix-tv-abroad-comparison" target="_blank" rel="noopener">Try free for 7 days →</a></p>
 

@@ -32,7 +32,7 @@ lang: en
     <p>If you scroll to the bottom of any article, you will see a single link to a paid service. That service is operated by the same author. The link is short, factual, and labeled. We are transparent about it because:</p>
     <ul>
       <li>You came here to solve a real problem, not to read an ad.</li>
-      <li>Some readers would rather pay $9.99/month to skip the 30-minute setup than DIY it. That is a valid choice.</li>
+      <li>Some readers would rather pay for the service to skip the 30-minute setup than DIY it. That is a valid choice.</li>
       <li>Maintaining this site takes a few hours per article (subscribe, test, screenshot, write, edit). The referral link covers the hosting and testing costs.</li>
     </ul>
     <p>If you would rather configure the setup yourself, every guide gives you the complete steps to do so. The DIY path is the primary content of this site.</p>

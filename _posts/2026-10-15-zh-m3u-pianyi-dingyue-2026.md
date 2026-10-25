@@ -163,7 +163,7 @@ A：TiviMate 免费下载，订阅价格在 Google Play 应用内显示。**官�
 
 如果你想跳过上面说的手动 M3U 配置流程，作者维护一个付费订阅服务：维护好的中文频道列表、自动续订链接、7 天试用入口。
 
-**免费试用 7 天** — 试用期间不需付款。试用结束后服务 **$9.99/月**（最少 3 个月）或 **$59.88/年**（省 50%）。
+**免费试用 7 天** — 试用期间不需付款。试用结束后转正常付费订阅。
 
 <p><a class="cta-button" href="https://iptv-search.com/login?tab=register&ref=taobao&utm_source=github-pages&utm_medium=seo-article&utm_campaign=zh-m3u-pianyi-dingyue-2026" target="_blank" rel="noopener">免费试用 7 天 →</a></p>
 
