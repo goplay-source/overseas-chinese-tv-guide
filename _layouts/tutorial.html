@@ -127,16 +127,8 @@ layout: default
     </div>
   </div>
 
-  {%- comment -%} 区块6 引流入口（改口吻：本站只做教程，实际服务在主站） {%- endcomment -%}
-  <section class="tut-block tut-cta" id="try">
-    <h2>{% if zh %}5. 到主站试试{% else %}5. Try it on the main site{% endif %}</h2>
-    <p class="tut-cta-line">{% if zh %}本站只做教程，不含服务{% else %}This site is tutorials only, no service{% endif %}</p>
-    <p class="tut-cta-sub">{% if zh %}上面这份教程是给你自己照着做的。要实际配好设备，去主站走 7 天试用，不满意不付费。{% else %}The guide above is for you to follow yourself. To actually get set up, use the 7-day trial on the main site — if it is not for you, you do not pay.{% endif %}</p>
-    <p class="tut-cta-btn">
-      <a class="cta-button" href="{{ page.trial_url | default: 'https://iptv-search.com/login?tab=register' | escape }}">{% if zh %}到主站试试{% else %}Open the main site{% endif %} →</a>
-    </p>
-    <p class="tut-cta-note">{% if zh %}设备配置问题重做不额外收费。{% else %}Redoing a configuration problem costs nothing extra.{% endif %}</p>
-  </section>
+  {%- comment -%} 区块6 已删：这是引流站，不做 7 天试用/不满意不付费这类服务承诺。
+      主站入口保留在全局页脚，教程页正文不再出现 CTA 卡片。 {%- endcomment -%}
 
   {%- if page.comments_id -%}
   <section class="comments-section">

@@ -97,4 +97,4 @@ steps:
 
 This guide only touches the device in your hands. It never touches your accounts.
 
-If the first setup stalls, match your symptom against the troubleshooting list above — it usually identifies the problem outright. To actually get set up, use the 7-day trial on the main site; if it is not for you, you do not pay.
+If the first setup stalls, match your symptom against the troubleshooting list above — it usually identifies the problem outright.
