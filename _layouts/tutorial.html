@@ -42,7 +42,7 @@ layout: default
       {%- comment -%} 区块1 适用设备表 {%- endcomment -%}
       <section class="tut-block" id="devices">
         <h2>{% if zh %}1. 适用设备{% else %}1. Supported devices{% endif %}</h2>
-        <p class="tut-note">{% if zh %}下表列出本文覆盖的设备型号。表里没有的型号请先联系确认，别照着别人的步骤硬套。{% else %}This table lists the device models covered here. If your model is not listed, ask first instead of copying someone else's steps.{% endif %}</p>
+        <p class="tut-note">{% if zh %}下表按设备型号列出对应的系统版本。系统版本决定了能装哪些播放器，表里没有的型号请先联系确认。{% else %}This table lists each device model with the system version it runs. The system version decides which players you can install. If your model is not listed, ask first.{% endif %}</p>
         <div class="tut-table-wrap">
           <table class="tut-table">
             <thead>
@@ -65,7 +65,7 @@ layout: default
             </tbody>
           </table>
         </div>
-        <p class="tut-placeholder">{% if zh %}设备清单待补充：{{ '<支持设备清单>' | escape }}{% else %}Device list to be supplied: {{ '<supported device list>' | escape }}{% endif %}</p>
+        <p class="tut-placeholder">{% if zh %}设备清单持续更新中。表里没有你的型号，先联系确认再动手。{% else %}The device list keeps growing. If your model is not in the table, contact us before you start.{% endif %}</p>
       </section>
 
       {%- comment -%} 区块2 准备清单 {%- endcomment -%}
@@ -76,7 +76,7 @@ layout: default
             <li>{{ item | escape }}</li>
           {%- endfor -%}
         </ul>
-        <p class="tut-placeholder">{% if zh %}耗时预估待填：{{ '<X分钟内>' | escape }}{% else %}Time estimate to be filled: {{ '<within X minutes>' | escape }}{% endif %}</p>
+        <p class="tut-note">{% if zh %}准备齐这四样，整套流程大概 10 分钟能走完。{% else %}With these four ready, the whole flow takes about 10 minutes.{% endif %}</p>
       </section>
 
       {%- comment -%} 区块3 步骤 1..N {%- endcomment -%}
@@ -149,7 +149,7 @@ layout: default
   <section class="tut-block tut-cta" id="try">
     <h2>{% if zh %}6. 7 天服务试用入口{% else %}6. 7-day service trial{% endif %}</h2>
     <p class="tut-cta-line">{% if zh %}7 天服务试用{% else %}7-day service trial{% endif %}</p>
-    <p class="tut-cta-sub">{% if zh %}先试 {{ '<X天>' | escape }}，不满意不付费。{% else %}Try it for {{ '<X days>' | escape }} first. If it is not for you, you do not pay.{% endif %}</p>
+    <p class="tut-cta-sub">{% if zh %}先试 7 天，不满意不付费。{% else %}Try it for 7 days first. If it is not for you, you do not pay.{% endif %}</p>
     <p class="tut-cta-btn">
       <a class="cta-button" href="{{ page.trial_url | default: 'https://iptv-search.com/login?tab=register' | escape }}">{% if zh %}主站入口{% else %}Open the main site{% endif %} →</a>
     </p>

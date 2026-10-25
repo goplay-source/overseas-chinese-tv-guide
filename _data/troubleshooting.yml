@@ -6,72 +6,72 @@
 
 - id: 1
   status: confirmed
-  title: 播放器版本太老，不支持当前格式
-  title_en: The player app is too old for the current format
-  symptom: 装好了播放器，打开播放列表却提示格式不支持，或列表能加载但一点就报错。
-  symptom_en: The player is installed, but the playlist opens with a format error, or the list loads and fails the moment you pick a channel.
-  check: 先在播放器的设置里看版本号。版本过旧的先升级到当前稳定版，再重新拉一次列表。
-  check_en: Open the player's settings and read the version number. If it is outdated, update to the current stable release and load the list again.
+  title: 设备是 Vega OS，播放器根本装不上
+  title_en: The device runs Vega OS, so the player cannot be installed at all
+  symptom: 应用商店里搜不到任何 M3U 播放器，或者搜到了但点安装没反应、提示不兼容。
+  symptom_en: You cannot find any M3U player in the app store, or you find one but the install button does nothing.
+  check: 进「设置 → 我的 Fire TV → 关于」看系统版本。写着 Vega OS 的设备（2026 款 Fire TV Stick 4K、4K Select、HD）只允许应用商店安装，装不了侧载 APK，这种设备请直接联系确认。
+  check_en: Open Settings > My Fire TV > About and read the system version. On Vega OS devices (Fire TV Stick 4K 3rd Gen 2026, 4K Select, HD 2026) only Appstore installs are allowed and sideloaded APKs are blocked. Contact us first on those.
 
 - id: 2
   status: confirmed
-  title: 网络环境有鉴权，播放器拉不到列表
-  title_en: The network needs authentication, so the player cannot pull the list
-  symptom: 填入地址后一直转圈，或者拉下来是空的，但同一台设备的网页能正常打开。
-  symptom_en: After you paste the address the player spins forever, or the list comes back empty, while a web browser on the same device opens the same address fine.
-  check: 用手机浏览器在同一个网络下打开地址。能打开说明地址没问题，是播放器没拿到鉴权信息，需要单独处理。
-  check_en: Open the address in a phone browser on the same network. If it opens, the address is fine and the player simply is not passing the authentication through.
+  title: 播放器装不上或装完打不开
+  title_en: The player will not install, or crashes right after installing
+  symptom: 侧载 APK 时被系统拦下提示权限不足；或者装完一点开就闪退。
+  symptom_en: The system blocks the sideloaded APK with a permission warning, or the app crashes the moment it opens.
+  check: Fire OS 7 / 8 需要先开开发者选项：进「设置 → 我的 Fire TV」，连点「设备型号」7 次，回到「开发者选项」打开「ADB 调试」或允许安装未知来源。装完记得把该开关关回去。
+  check_en: "Fire OS 7 and 8 need Developer Options first: open Settings > My Fire TV and tap the device model 7 times, then turn on ADB debugging or allow unknown app installs. Turn it back off when you are done."
 
 - id: 3
   status: confirmed
-  title: 设备系统限制，权限没给够
-  title_en: The device system restricts the app and the permissions are not enough
-  symptom: 安装时被系统拦下，提示缺少权限，或者装完打开就闪退。
-  symptom_en: The system blocks the install with a permission warning, or the app crashes as soon as it opens.
-  check: 在设备的系统设置里检查应用权限，把需要的几项手动打开；国产定制系统常需要单独授权。
-  check_en: Check the app permissions in the device system settings and switch on the ones it asks for. Customised systems in some markets need a separate authorisation step.
+  title: 应用商店搜不到播放器，搜到的不是播放器
+  title_en: The app store has no player, or the results are not players
+  symptom: 在应用商店搜「IPTV」「M3U」出来的是一堆点开就是广告的付费订阅应用，没有一个能填播放列表地址。
+  symptom_en: Searching the app store for IPTV or M3U returns ad-heavy paid subscription apps, none of which accept a playlist address.
+  check: TiviMate 和 Kodi 都不在 Amazon 应用商店，需要先用 Downloader 侧载（Downloader 本身在商店里有，搜 Downloader by AFTVnews）。不想侧载就用 VLC，但它只当本地和网络文件播放器用。
+  check_en: "Neither TiviMate nor Kodi is in the Amazon Appstore. Install Downloader first (search \"Downloader by AFTVnews\") and use it to sideload. If you do not want to sideload, use VLC, but it behaves as a local and network file player."
 
 - id: 4
-  status: placeholder
-  title: <失败点 4>
-  title_en: <failure case 4>
-  symptom: <现象>
-  symptom_en: <symptom>
-  check: <先查什么>
-  check_en: <check first>
+  status: confirmed
+  title: 填入地址后一直转圈，列表拉不下来
+  title_en: The player spins forever after you paste the address
+  symptom: 保存后播放器一直转圈，或者拉下来是空的，但同一台设备的浏览器能正常打开这个地址。
+  symptom_en: After saving, the player spins forever or returns an empty list, while a browser on the same device opens the same address fine.
+  check: 用手机浏览器在同一个网络下打开地址。能打开说明地址没问题，是播放器没带上鉴权信息，需要单独处理。
+  check_en: Open the address in a phone browser on the same network. If it opens, the address is fine and the player simply is not passing the authentication through.
 
 - id: 5
-  status: placeholder
-  title: <失败点 5>
-  title_en: <failure case 5>
-  symptom: <现象>
-  symptom_en: <symptom>
-  check: <先查什么>
-  check_en: <check first>
+  status: confirmed
+  title: 列表出来了但频道播不了
+  title_en: The list loads but the channels will not play
+  symptom: 分组和台号都显示出来了，点一个台就黑屏，或者提示不可用、一直转圈没声音。
+  symptom_en: Groups and channel numbers show up, but selecting one gives a black screen or an unavailable message.
+  check: 先换一台同网络下的设备用 VLC 打开同一条地址做对照。VLC 能播就是播放器的解码或权限问题，VLC 也播不了就是地址本身的问题。
+  check_en: Cross-check the same address in VLC on another device on the same network. If VLC plays it, the problem is the player's decoder or permissions. If VLC cannot play it either, the address itself is the problem.
 
 - id: 6
-  status: placeholder
-  title: <失败点 6>
-  title_en: <failure case 6>
-  symptom: <现象>
-  symptom_en: <symptom>
-  check: <先查什么>
-  check_en: <check first>
+  status: confirmed
+  title: 播放一直卡顿、缓冲
+  title_en: The stream keeps buffering
+  symptom: 台能播但几秒一卡，画面糊、声音断续。
+  symptom_en: The channel plays but stutters every few seconds, with soft picture and broken audio.
+  check: 先把设备挪近路由器或切到 5 GHz 频段，再在播放器里把缓存调大一点。同网络下别的设备在占用带宽也会拖垮它。
+  check_en: Move the device closer to the router or switch to the 5 GHz band, then increase the buffer size in the player. Other devices on the same network using bandwidth will slow it down too.
 
 - id: 7
-  status: placeholder
-  title: <失败点 7>
-  title_en: <failure case 7>
-  symptom: <现象>
-  symptom_en: <symptom>
-  check: <先查什么>
-  check_en: <check first>
+  status: confirmed
+  title: 设备太老，系统版本跟不上
+  title_en: The device is too old and the system version is behind
+  symptom: 设备很卡，界面拖不动，或者侧载的播放器要求更高系统版本，直接提示不兼容装不上。
+  symptom_en: The device is very slow, the interface lags, or the player requires a newer system version and refuses to install.
+  check: 进「设置 → 我的 Fire TV → 关于」看 Fire OS 版本。Fire OS 5 / 6 / 7 属于老系统，能装的播放器版本有限，先升级系统或换设备。
+  check_en: Open Settings > My Fire TV > About and read the Fire OS version. Fire OS 5, 6 and 7 are older systems with fewer compatible player versions. Update the system or change the device.
 
 - id: 8
-  status: placeholder
-  title: <失败点 8>
-  title_en: <failure case 8>
-  symptom: <现象>
-  symptom_en: <symptom>
-  check: <先查什么>
-  check_en: <check first>
+  status: confirmed
+  title: 播放列表地址过期或更换
+  title_en: The playlist address expired or was replaced
+  symptom: 之前一直能用，某天突然转圈、拉不到列表、或者提示地址不存在，但设备没动过、网络也没变。
+  symptom_en: It used to work, then one day the player spins, the list will not load, or the address is reported as missing, even though nothing on the device or network changed.
+  check: 找服务商要一份最新的地址重新填一遍。很多服务商会定期轮换或分批发放播放列表地址，旧地址到期就失效，这属于服务方的正常操作，不是设备问题。
+  check_en: Ask your provider for the current address and paste it again. Many providers rotate or reissue playlist addresses on a schedule, so an old one stops working on its own. That is normal service behaviour, not a device fault.
