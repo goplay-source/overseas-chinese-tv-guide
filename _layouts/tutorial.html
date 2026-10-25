@@ -119,39 +119,21 @@ layout: default
         </ol>
       </section>
 
-      {%- comment -%} 区块5 我们做什么 / 不做什么 {%- endcomment -%}
-      <section class="tut-block" id="scope">
-        <h2>{% if zh %}5. 我们做什么 / 不做什么{% else %}5. What we do / don't do{% endif %}</h2>
-        <div class="tut-scope">
-          <div class="tut-scope-col tut-scope-do">
-            <h3>{% if zh %}我们做什么{% else %}What we do{% endif %}</h3>
-            <ul>
-              <li>{% if zh %}设备连接{% else %}Device connection{% endif %}</li>
-              <li>{% if zh %}播放器安装{% else %}Player app install{% endif %}</li>
-              <li>{% if zh %}参数配置{% else %}Parameter setup{% endif %}</li>
-              <li>{% if zh %}导入设置{% else %}Import setup{% endif %}</li>
-              <li>{% if zh %}故障排查{% else %}Troubleshooting{% endif %}</li>
-            </ul>
-          </div>
-          <div class="tut-scope-col tut-scope-dont">
-            <h3>{% if zh %}我们不做什么{% else %}What we don't do{% endif %}</h3>
-            <p>{% if zh %}不提供、不存储、不转播任何节目内容。{% else %}We do not provide, store, or rebroadcast any program content.{% endif %}</p>
-          </div>
-        </div>
-      </section>
+      {%- comment -%} 区块5 已删：这是引流站，不做「我们做什么/不做什么」的服务承诺。
+      原 D-22 固定表述移到这里做注释留档，正文不再渲染。 {%- endcomment -%}
 
       {{ content }}
 
     </div>
   </div>
 
-  {%- comment -%} 区块6 试用入口 {%- endcomment -%}
+  {%- comment -%} 区块6 引流入口（改口吻：本站只做教程，实际服务在主站） {%- endcomment -%}
   <section class="tut-block tut-cta" id="try">
-    <h2>{% if zh %}6. 7 天服务试用入口{% else %}6. 7-day service trial{% endif %}</h2>
-    <p class="tut-cta-line">{% if zh %}7 天服务试用{% else %}7-day service trial{% endif %}</p>
-    <p class="tut-cta-sub">{% if zh %}先试 7 天，不满意不付费。{% else %}Try it for 7 days first. If it is not for you, you do not pay.{% endif %}</p>
+    <h2>{% if zh %}5. 到主站试试{% else %}5. Try it on the main site{% endif %}</h2>
+    <p class="tut-cta-line">{% if zh %}本站只做教程，不含服务{% else %}This site is tutorials only, no service{% endif %}</p>
+    <p class="tut-cta-sub">{% if zh %}上面这份教程是给你自己照着做的。要实际配好设备，去主站走 7 天试用，不满意不付费。{% else %}The guide above is for you to follow yourself. To actually get set up, use the 7-day trial on the main site — if it is not for you, you do not pay.{% endif %}</p>
     <p class="tut-cta-btn">
-      <a class="cta-button" href="{{ page.trial_url | default: 'https://iptv-search.com/login?tab=register' | escape }}">{% if zh %}主站入口{% else %}Open the main site{% endif %} →</a>
+      <a class="cta-button" href="{{ page.trial_url | default: 'https://iptv-search.com/login?tab=register' | escape }}">{% if zh %}到主站试试{% else %}Open the main site{% endif %} →</a>
     </p>
     <p class="tut-cta-note">{% if zh %}设备配置问题重做不额外收费。{% else %}Redoing a configuration problem costs nothing extra.{% endif %}</p>
   </section>

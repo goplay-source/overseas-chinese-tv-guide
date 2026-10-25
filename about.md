@@ -41,7 +41,7 @@ lang: en
   <div class="about-section">
     <h2>Editorial process</h2>
     <p>Every article follows the same structure: problem framing (what does the user actually need), options compared (real prices, real hardware requirements), one recommended technical path, FAQ, conclusion. The 5-section structure is deliberate — it lets you skip to the section you care about without reading the whole article.</p>
-    <p>Setup guides follow a longer, 6-part structure: the devices we support, what you need ready before you start, the steps themselves (one screenshot and at most three lines per step), a troubleshooting list of the eight failures we have actually hit, an explicit list of what we do and do not do, and the trial entry point.</p>
+    <p>Setup guides follow a longer structure: the devices we support, what you need ready before you start, the steps themselves (one screenshot and at most three lines per step), a troubleshooting list of the eight failures we have actually hit, and a link to the main site for the service part — this site itself only carries the tutorial.</p>
     <p>Articles are rewritten (not just updated) when the underlying technology changes materially. The most recent rewrite was October 2026, after we noticed Fire TV Stick 4K Max dropped to $89.48 and several M3U players added new features.</p>
   </div>
 

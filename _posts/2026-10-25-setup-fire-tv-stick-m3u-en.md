@@ -43,7 +43,7 @@ prep_items:
   - "A device with internet access"
   - "Your device model and system version (screenshot or text)"
   - "About 10 minutes of your time"
-  - "An uninterrupted stretch (remote help needs you online)"
+  - "An uninterrupted stretch of time"
 
 steps:
   - no: 1
@@ -97,4 +97,4 @@ steps:
 
 This guide only touches the device in your hands. It never touches your accounts.
 
-If the first setup stalls, match your symptom against section 4 — it usually identifies the problem outright. We can also walk you through it over remote help, and redoing a configuration problem costs nothing extra.
+If the first setup stalls, match your symptom against the troubleshooting list above — it usually identifies the problem outright. To actually get set up, use the 7-day trial on the main site; if it is not for you, you do not pay.

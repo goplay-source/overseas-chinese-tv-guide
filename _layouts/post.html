@@ -49,26 +49,7 @@ layout: default
     </ol>
   </section>
 
-  <section class="tut-block" id="scope">
-    <h2>{% if zh %}我们做什么 / 不做什么{% else %}What we do / don't do{% endif %}</h2>
-    <div class="tut-scope">
-      <div class="tut-scope-col tut-scope-do">
-        <h3>{% if zh %}我们做什么{% else %}What we do{% endif %}</h3>
-        <ul>
-          <li>{% if zh %}设备连接{% else %}Device connection{% endif %}</li>
-          <li>{% if zh %}播放器安装{% else %}Player app install{% endif %}</li>
-          <li>{% if zh %}参数配置{% else %}Parameter setup{% endif %}</li>
-          <li>{% if zh %}导入设置{% else %}Import setup{% endif %}</li>
-          <li>{% if zh %}故障排查{% else %}Troubleshooting{% endif %}</li>
-        </ul>
-      </div>
-      <div class="tut-scope-col tut-scope-dont">
-        <h3>{% if zh %}我们不做什么{% else %}What we don't do{% endif %}</h3>
-        <p>{% if zh %}不提供、不存储、不转播任何节目内容。{% else %}We do not provide, store, or rebroadcast any program content.{% endif %}</p>
-      </div>
-    </div>
-    <p class="tut-note">{% if zh %}本文只讲操作你自己的设备，不接触你的任何账号。第一次配置如果卡住，把失败现象按上面第 4 节对一下，八成能直接定位。{% else %}This guide only covers operating your own device and never touches your accounts. If the first setup stalls, match your symptom against the troubleshooting list above — it is usually enough to locate the cause.{% endif %}</p>
-  </section>
+  {%- comment -%} 原「我们做什么/不做什么」区块已删：这是引流站，不做服务承诺。留注释备查。 {%- endcomment -%}
   {%- if page.comments_id -%}
   <section class="comments-section">
     <h2>Comments &amp; questions</h2>
