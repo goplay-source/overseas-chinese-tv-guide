@@ -18,6 +18,7 @@ lang: en
     <h2>What this site is not</h2>
     <p>This site does not host, stream, or rebroadcast any TV channel. It does not sell M3U subscriptions directly. It is a setup guide, not a content provider.</p>
     <p>Every article explicitly states the factual limits of each option (which channels are included, which are not, what the actual monthly cost is). We do not evaluate the copyright status of any specific service's content source — that is the responsibility of each service and the user who subscribes to it.</p>
+    <p>When you use our remote help, we operate your device and nothing else. We do not touch your accounts, we do not keep your credentials, and we do not store anything on your device beyond the setup you asked for.</p>
   </div>
 
   <div class="about-section">
@@ -40,6 +41,7 @@ lang: en
   <div class="about-section">
     <h2>Editorial process</h2>
     <p>Every article follows the same structure: problem framing (what does the user actually need), options compared (real prices, real hardware requirements), one recommended technical path, FAQ, conclusion. The 5-section structure is deliberate — it lets you skip to the section you care about without reading the whole article.</p>
+    <p>Setup guides follow a longer, 6-part structure: the devices we support, what you need ready before you start, the steps themselves (one screenshot and at most three lines per step), a troubleshooting list of the eight failures we have actually hit, an explicit list of what we do and do not do, and the trial entry point.</p>
     <p>Articles are rewritten (not just updated) when the underlying technology changes materially. The most recent rewrite was October 2026, after we noticed Fire TV Stick 4K Max dropped to $89.48 and several M3U players added new features.</p>
   </div>
 

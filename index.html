@@ -6,20 +6,46 @@ lang: en
 <section class="home-hero">
   <h1>{{ site.title | escape }}</h1>
   <p class="tagline">{{ site.tagline | escape }}</p>
-  <p class="lede">Five long-tail guides covering the most common "Chinese TV abroad" questions: sports, Cantonese, Hong Kong dramas, Phoenix TV, and budget M3U subscriptions. Every guide is paid-by-our-wallet tested and rewritten in 2026.</p>
+  <p class="lede">Long-tail guides covering the most common "Chinese TV abroad" questions: sports, Cantonese, Hong Kong dramas, Phoenix TV, and budget M3U subscriptions — plus step-by-step setup guides with one screenshot per step. Every guide is paid-by-our-wallet tested and rewritten in 2026.</p>
   <div class="cta-row">
-    <a class="cta-button primary" href="https://iptv-search.com/login?tab=register&amp;utm_source=github-pages&amp;utm_medium=homepage&amp;utm_campaign=overseas-chinese-tv-guide" target="_blank" rel="noopener">Try the setup free for 7 days</a>
+    <a class="cta-button primary" href="https://iptv-search.com/login?tab=register&amp;ref=taobao&amp;utm_source=github-pages&amp;utm_medium=homepage&amp;utm_campaign=overseas-chinese-tv-guide" target="_blank" rel="noopener">Try the setup free for 7 days</a>
     <a class="cta-button ghost" href="#guides">Read the guides</a>
   </div>
 </section>
 
-<div class="section-title" id="guides">
-  <h2>Latest guides</h2>
-  <span class="section-count">{{ site.posts | size }} articles</span>
+<div class="section-title" id="setup-guides">
+  <h2>Setup guides</h2>
+  <span class="section-count">one image per step</span>
 </div>
 
 <div class="card-grid">
-  {%- assign sorted = site.posts | sort: 'date' | reverse -%}
+  {%- assign tutorials = site.posts | where: 'layout', 'tutorial' | sort: 'date' | reverse -%}
+  {%- for post in tutorials -%}
+  <a class="card" href="{{ post.url | relative_url }}">
+    <div class="card-meta">
+      {%- assign plang = post.lang | default: 'en' -%}
+      {%- if plang == 'zh' or plang == 'zh-CN' -%}
+        <span class="card-tag">中文</span>
+      {%- else -%}
+        <span class="card-tag">EN</span>
+      {%- endif -%}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    </div>
+    <h3>{{ post.title | escape }}</h3>
+    {%- if post.target -%}
+    <p class="card-excerpt">{{ post.target }}</p>
+    {%- endif -%}
+  </a>
+  {%- endfor -%}
+</div>
+
+<div class="section-title" id="guides">
+  <h2>Latest guides</h2>
+  <span class="section-count">{{ site.posts | where_exp: "p", "p.layout != 'tutorial'" | size }} articles</span>
+</div>
+
+<div class="card-grid">
+  {%- assign sorted = site.posts | where_exp: "p", "p.layout != 'tutorial'" | sort: 'date' | reverse -%}
   {%- for post in sorted limit: 10 -%}
   <a class="card" href="{{ post.url | relative_url }}">
     <div class="card-meta">
@@ -43,6 +69,6 @@ lang: en
   <h2>Skip the manual setup</h2>
   <p>Every guide above tells you how to configure an M3U subscription yourself. If you would rather skip the manual steps, the author maintains a paid subscription service with a maintained Chinese channel list, auto-renewing subscription link, and a 7-day trial.</p>
   <p class="price-line"><strong>Try free for 7 days</strong> — no payment required during the trial. After the trial, the service is $9.99/month (3-month minimum) or $59.88/year (save 50%).</p>
-  <a class="cta-button" href="https://iptv-search.com/login?tab=register&amp;utm_source=github-pages&amp;utm_medium=homepage&amp;utm_campaign=overseas-chinese-tv-guide" target="_blank" rel="noopener">Try free for 7 days &rarr;</a>
+  <a class="cta-button" href="https://iptv-search.com/login?tab=register&amp;ref=taobao&amp;utm_source=github-pages&amp;utm_medium=homepage&amp;utm_campaign=overseas-chinese-tv-guide" target="_blank" rel="noopener">Try free for 7 days &rarr;</a>
   <p class="cta-note">After registering, you will receive a subscription link and 7-day VIP trial automatically.</p>
 </div>

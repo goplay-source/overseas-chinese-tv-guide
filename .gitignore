@@ -9,3 +9,5 @@ vendor/
 .DS_Store
 Thumbs.db
 *.log
+# 内部工作文档（不公开）
+docs/

@@ -323,3 +323,233 @@ tr:hover td { background: var(--bg-soft); }
   .site-nav { gap: 0; }
   .site-nav .page-link { padding: 0.3rem 0.6rem; font-size: 0.9rem; }
 }
+
+/* ---------- Tutorial guide (12-引流站教程页 · D-48 六区块) ---------- */
+.tut-kind {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.tut-lede {
+  color: var(--fg-soft);
+  font-size: 1.05rem;
+  margin: 0.6rem 0 0;
+}
+.tut-block { margin: 2.5rem 0; }
+.tut-block > h2 {
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border);
+  font-size: 1.35rem;
+}
+.tut-note {
+  color: var(--fg-soft);
+  font-size: 0.92rem;
+}
+.tut-placeholder {
+  color: var(--fg-muted);
+  font-size: 0.85rem;
+  border-left: 3px solid var(--border-strong);
+  padding-left: 0.7rem;
+}
+
+/* 区块1 设备表 */
+.tut-table-wrap { overflow-x: auto; margin: 1rem 0; }
+.tut-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  min-width: 520px;
+}
+.tut-table th {
+  background: var(--bg-soft);
+  color: var(--fg);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.tut-table td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+.tut-table .tut-yes { color: var(--accent); font-weight: 600; }
+/* 占位符单元格用中性灰，不做强调色，避免看起来像已确认结论 */
+.tut-table .tut-can { color: var(--fg-muted); }
+
+/* 区块2 准备清单 */
+.tut-prep {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.tut-prep li {
+  position: relative;
+  padding: 0.4rem 0 0.4rem 1.6rem;
+  border-bottom: 1px solid var(--border);
+}
+.tut-prep li:last-child { border-bottom: none; }
+.tut-prep li::before {
+  content: "";
+  position: absolute;
+  left: 0.3rem;
+  top: 0.85rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* 区块3 步骤 */
+.tut-step {
+  margin: 2rem 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.tut-step:last-child { border-bottom: none; }
+.tut-step-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+.tut-step-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  flex: 0 0 1.9rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.tut-figure {
+  margin: 0 0 0.9rem;
+}
+.tut-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.tut-figure figcaption {
+  color: var(--fg-muted);
+  font-size: 0.82rem;
+  margin-top: 0.4rem;
+}
+.tut-step-body p { margin: 0.5rem 0; }
+.tut-pitfall {
+  background: #fff2cc;
+  border-left: 4px solid #d69e2e;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.8rem;
+  color: #5a3e0a;
+  font-size: 0.92rem;
+  margin-top: 0.9rem;
+}
+
+/* 区块4 失败点速查 */
+.tut-trouble {
+  list-style: none;
+  counter-reset: tut-t;
+  padding: 0;
+  margin: 1rem 0;
+}
+.tut-trouble-item {
+  counter-increment: tut-t;
+  position: relative;
+  padding: 0.9rem 1rem 0.9rem 3rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.7rem;
+  background: var(--bg-card);
+}
+.tut-trouble-item::before {
+  content: counter(tut-t);
+  position: absolute;
+  left: 0.9rem;
+  top: 0.9rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tut-trouble-item h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+.tut-trouble-item.is-placeholder { background: var(--bg-soft); }
+.tut-trouble-item.is-placeholder h4 { color: var(--fg-muted); }
+.tut-tag {
+  display: inline-block;
+  min-width: 4.2rem;
+  margin-right: 0.5rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-soft);
+  color: var(--fg-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.tut-trouble-symptom,
+.tut-trouble-check { margin: 0.3rem 0; font-size: 0.92rem; }
+
+/* 区块5 范围 */
+.tut-scope {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.tut-scope-col {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+.tut-scope-col h3 { margin: 0 0 0.6rem; font-size: 1.05rem; }
+.tut-scope-do { background: var(--accent-soft); border-color: #ddd4ff; }
+.tut-scope-dont { background: var(--bg-soft); }
+.tut-scope-col ul { margin: 0; padding-left: 1.1rem; }
+.tut-scope-col li { margin: 0.25rem 0; }
+
+/* 区块6 试用入口 */
+.tut-cta {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+}
+.tut-cta > h2 { border-bottom: none; margin-top: 0; }
+.tut-cta-line {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0.4rem 0;
+}
+.tut-cta-sub { color: var(--fg-soft); margin: 0.2rem 0 0.8rem; }
+.tut-cta-btn { margin: 0.6rem 0; }
+.tut-cta-note { color: var(--fg-soft); font-size: 0.85rem; margin: 0.4rem 0 0; }
+
+@media (max-width: 720px) {
+  .tut-scope { grid-template-columns: 1fr; }
+  .tut-trouble-item { padding-left: 2.6rem; }
+  .tut-tag { min-width: 3.6rem; }
+}

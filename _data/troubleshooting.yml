@@ -1,0 +1,77 @@
+# 失败点速查 — 全站共用数据源
+# 12-引流站教程页 方案 D-21 区块4 的数据来源
+# 规则：每条必须有「现象」和「先查什么」两段；未确认的条目保留占位符，不得编造。
+# 状态字段 status: confirmed = 有实际案例支撑；placeholder = 等待真实案例补充。
+# 英文文章用 *_en 字段；_en 缺失时回落中文（不编造英文案例）。
+
+- id: 1
+  status: confirmed
+  title: 播放器版本太老，不支持当前格式
+  title_en: The player app is too old for the current format
+  symptom: 装好了播放器，打开播放列表却提示格式不支持，或列表能加载但一点就报错。
+  symptom_en: The player is installed, but the playlist opens with a format error, or the list loads and fails the moment you pick a channel.
+  check: 先在播放器的设置里看版本号。版本过旧的先升级到当前稳定版，再重新拉一次列表。
+  check_en: Open the player's settings and read the version number. If it is outdated, update to the current stable release and load the list again.
+
+- id: 2
+  status: confirmed
+  title: 网络环境有鉴权，播放器拉不到列表
+  title_en: The network needs authentication, so the player cannot pull the list
+  symptom: 填入地址后一直转圈，或者拉下来是空的，但同一台设备的网页能正常打开。
+  symptom_en: After you paste the address the player spins forever, or the list comes back empty, while a web browser on the same device opens the same address fine.
+  check: 用手机浏览器在同一个网络下打开地址。能打开说明地址没问题，是播放器没拿到鉴权信息，需要单独处理。
+  check_en: Open the address in a phone browser on the same network. If it opens, the address is fine and the player simply is not passing the authentication through.
+
+- id: 3
+  status: confirmed
+  title: 设备系统限制，权限没给够
+  title_en: The device system restricts the app and the permissions are not enough
+  symptom: 安装时被系统拦下，提示缺少权限，或者装完打开就闪退。
+  symptom_en: The system blocks the install with a permission warning, or the app crashes as soon as it opens.
+  check: 在设备的系统设置里检查应用权限，把需要的几项手动打开；国产定制系统常需要单独授权。
+  check_en: Check the app permissions in the device system settings and switch on the ones it asks for. Customised systems in some markets need a separate authorisation step.
+
+- id: 4
+  status: placeholder
+  title: <失败点 4>
+  title_en: <failure case 4>
+  symptom: <现象>
+  symptom_en: <symptom>
+  check: <先查什么>
+  check_en: <check first>
+
+- id: 5
+  status: placeholder
+  title: <失败点 5>
+  title_en: <failure case 5>
+  symptom: <现象>
+  symptom_en: <symptom>
+  check: <先查什么>
+  check_en: <check first>
+
+- id: 6
+  status: placeholder
+  title: <失败点 6>
+  title_en: <failure case 6>
+  symptom: <现象>
+  symptom_en: <symptom>
+  check: <先查什么>
+  check_en: <check first>
+
+- id: 7
+  status: placeholder
+  title: <失败点 7>
+  title_en: <failure case 7>
+  symptom: <现象>
+  symptom_en: <symptom>
+  check: <先查什么>
+  check_en: <check first>
+
+- id: 8
+  status: placeholder
+  title: <失败点 8>
+  title_en: <failure case 8>
+  symptom: <现象>
+  symptom_en: <symptom>
+  check: <先查什么>
+  check_en: <check first>

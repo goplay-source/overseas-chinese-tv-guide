@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 lang: zh-CN
 title: "海外看凤凰卫视：M3U vs Sling vs KyLinTV 三方对比"
@@ -139,7 +139,7 @@ DirecTV 只为 Phoenix 频道付 $20+ 加包**性价比低**；Sling TV 适合�
 
 **免费试用 7 天** — 试用期间不需付款。试用结束后服务 **$9.99/月**（最少 3 个月）或 **$59.88/年**（省 50%）。
 
-<p><a class="cta-button" href="https://iptv-search.com/login?tab=register&utm_source=github-pages&utm_medium=seo-article&utm_campaign=zh-fenghuang-weishi-haiwai-2026" target="_blank" rel="noopener">免费试用 7 天 →</a></p>
+<p><a class="cta-button" href="https://iptv-search.com/login?tab=register&ref=taobao&utm_source=github-pages&utm_medium=seo-article&utm_campaign=zh-fenghuang-weishi-haiwai-2026" target="_blank" rel="noopener">免费试用 7 天 →</a></p>
 
 注册后会自动获得订阅链接和 7 天 VIP 试用。
 

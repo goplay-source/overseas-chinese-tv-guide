@@ -26,6 +26,49 @@ layout: default
       {{ content }}
     </div>
   </div>
+
+  {%- comment -%}
+    12-引流站教程页 方案 D-21 / D-22 的两个区块，在普通文章里也给出。
+    理由：方案的核心策略是「失败点全写 = 信任来源」，只在新教程页写等于把老文章的经验藏起来。
+    数据源与教程页共用 _data/troubleshooting.yml，教程页本身用 tutorial layout，不走这里。
+  {%- endcomment -%}
+  {%- assign zh = false -%}
+  {%- if lang == 'zh' or lang == 'zh-CN' -%}{%- assign zh = true -%}{%- endif -%}
+
+  <section class="tut-block" id="troubleshooting">
+    <h2>{% if zh %}失败点速查（8 条）{% else %}Troubleshooting (8 cases){% endif %}</h2>
+    <p class="tut-note">{% if zh %}这八条是我们真实遇到过的失败点，写在这里而不是藏着。先按现象找到最接近的一条，再按「先查什么」查。{% else %}These eight are real failures we hit. They are written down instead of hidden. Match your symptom first, then work through the check.{% endif %}</p>
+    <ol class="tut-trouble">
+      {%- for t in site.data.troubleshooting -%}
+        <li class="tut-trouble-item{% if t.status == 'placeholder' %} is-placeholder{% endif %}">
+          <h4>{% if zh %}{{ t.title | escape }}{% else %}{{ t.title_en | default: t.title | escape }}{% endif %}</h4>
+          <p class="tut-trouble-symptom"><span class="tut-tag">{% if zh %}现象{% else %}Symptom{% endif %}</span>{% if zh %}{{ t.symptom | escape }}{% else %}{{ t.symptom_en | default: t.symptom | escape }}{% endif %}</p>
+          <p class="tut-trouble-check"><span class="tut-tag">{% if zh %}先查什么{% else %}Check first{% endif %}</span>{% if zh %}{{ t.check | escape }}{% else %}{{ t.check_en | default: t.check | escape }}{% endif %}</p>
+        </li>
+      {%- endfor -%}
+    </ol>
+  </section>
+
+  <section class="tut-block" id="scope">
+    <h2>{% if zh %}我们做什么 / 不做什么{% else %}What we do / don't do{% endif %}</h2>
+    <div class="tut-scope">
+      <div class="tut-scope-col tut-scope-do">
+        <h3>{% if zh %}我们做什么{% else %}What we do{% endif %}</h3>
+        <ul>
+          <li>{% if zh %}设备连接{% else %}Device connection{% endif %}</li>
+          <li>{% if zh %}播放器安装{% else %}Player app install{% endif %}</li>
+          <li>{% if zh %}参数配置{% else %}Parameter setup{% endif %}</li>
+          <li>{% if zh %}导入设置{% else %}Import setup{% endif %}</li>
+          <li>{% if zh %}故障排查{% else %}Troubleshooting{% endif %}</li>
+        </ul>
+      </div>
+      <div class="tut-scope-col tut-scope-dont">
+        <h3>{% if zh %}我们不做什么{% else %}What we don't do{% endif %}</h3>
+        <p>{% if zh %}不提供、不存储、不转播任何节目内容。{% else %}We do not provide, store, or rebroadcast any program content.{% endif %}</p>
+      </div>
+    </div>
+    <p class="tut-note">{% if zh %}本文只讲操作你自己的设备，不接触你的任何账号。第一次配置如果卡住，把失败现象按上面第 4 节对一下，八成能直接定位。{% else %}This guide only covers operating your own device and never touches your accounts. If the first setup stalls, match your symptom against the troubleshooting list above — it is usually enough to locate the cause.{% endif %}</p>
+  </section>
   {%- if page.comments_id -%}
   <section class="comments-section">
     <h2>Comments &amp; questions</h2>
@@ -38,7 +81,7 @@ layout: default
   (function() {
     var toc = document.getElementById('toc-list');
     if (!toc) return;
-    var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+    var headings = document.querySelectorAll('.post-content h2, .post-content h3, article.post > section.tut-block h2');
     if (headings.length === 0) {
       var aside = document.querySelector('.post-toc');
       if (aside) aside.style.display = 'none';

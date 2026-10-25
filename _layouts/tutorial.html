@@ -1,0 +1,187 @@
+---
+layout: default
+---
+{%- comment -%}
+教程页 layout —— 12-引流站教程页 方案 D-48 的 6 区块结构
+区块1 适用设备表 / 区块2 准备清单 / 区块3 步骤 1..N / 区块4 失败点速查 / 区块5 我们做什么-不做什么 / 区块6 试用入口
+页面用 data 驱动：front matter 里写 device_rows / prep_items / steps，失败点统一从 _data/troubleshooting.yml 读。
+{%- endcomment -%}
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign zh = false -%}
+{%- if lang == 'zh' or lang == 'zh-CN' -%}{%- assign zh = true -%}{%- endif -%}
+<article class="post tut">
+  <header class="post-header">
+    {%- if zh -%}
+      <span class="lang-badge zh">中文</span>
+    {%- else -%}
+      <span class="lang-badge en">EN</span>
+    {%- endif -%}
+    <span class="tut-kind">{% if zh %}设备教程{% else %}Setup guide{% endif %}</span>
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    {%- if page.description -%}
+      <p class="tut-lede">{{ page.description | escape }}</p>
+    {%- endif -%}
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {%- if page.target -%}
+        &middot; <span>{{ page.target }}</span>
+      {%- endif -%}
+      {%- if page.duration -%}
+        &middot; <span>{% if zh %}预计耗时{% else %}Takes{% endif %} {{ page.duration | escape }}</span>
+      {%- endif -%}
+    </p>
+  </header>
+
+  <div class="post-with-toc">
+    <aside class="post-toc" aria-label="Table of contents">
+      <div class="toc-title">{% if zh %}本页目录{% else %}On this page{% endif %}</div>
+      <ul id="toc-list"></ul>
+    </aside>
+    <div class="post-content">
+
+      {%- comment -%} 区块1 适用设备表 {%- endcomment -%}
+      <section class="tut-block" id="devices">
+        <h2>{% if zh %}1. 适用设备{% else %}1. Supported devices{% endif %}</h2>
+        <p class="tut-note">{% if zh %}下表列出本文覆盖的设备型号。表里没有的型号请先联系确认，别照着别人的步骤硬套。{% else %}This table lists the device models covered here. If your model is not listed, ask first instead of copying someone else's steps.{% endif %}</p>
+        <div class="tut-table-wrap">
+          <table class="tut-table">
+            <thead>
+              <tr>
+                <th>{% if zh %}设备型号{% else %}Device model{% endif %}</th>
+                <th>{% if zh %}系统版本{% else %}System version{% endif %}</th>
+                <th>{% if zh %}能否配置{% else %}Can configure{% endif %}</th>
+                <th>{% if zh %}需不需要额外工具{% else %}Extra tools needed{% endif %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for row in page.device_rows -%}
+                <tr>
+                  <td>{{ row.model | escape }}</td>
+                  <td>{{ row.system | escape }}</td>
+                  <td class="tut-can">{{ row.can | escape }}</td>
+                  <td>{{ row.tools | escape }}</td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+        <p class="tut-placeholder">{% if zh %}设备清单待补充：{{ '<支持设备清单>' | escape }}{% else %}Device list to be supplied: {{ '<supported device list>' | escape }}{% endif %}</p>
+      </section>
+
+      {%- comment -%} 区块2 准备清单 {%- endcomment -%}
+      <section class="tut-block" id="prep">
+        <h2>{% if zh %}2. 开始前准备{% else %}2. Before you start{% endif %}</h2>
+        <ul class="tut-prep">
+          {%- for item in page.prep_items -%}
+            <li>{{ item | escape }}</li>
+          {%- endfor -%}
+        </ul>
+        <p class="tut-placeholder">{% if zh %}耗时预估待填：{{ '<X分钟内>' | escape }}{% else %}Time estimate to be filled: {{ '<within X minutes>' | escape }}{% endif %}</p>
+      </section>
+
+      {%- comment -%} 区块3 步骤 1..N {%- endcomment -%}
+      <section class="tut-block" id="steps">
+        <h2>{% if zh %}3. 步骤{% else %}3. Steps{% endif %}</h2>
+        {%- for step in page.steps -%}
+          <div class="tut-step">
+            <h3 class="tut-step-title">
+              <span class="tut-step-no">{{ step.no }}</span>
+              {{ step.title | escape }}
+            </h3>
+            {%- if step.image -%}
+              <figure class="tut-figure">
+                <img src="{{ step.image | relative_url }}" alt="{{ step.alt | escape }}" loading="lazy" width="1280" height="720">
+                {%- if step.caption -%}
+                  <figcaption>{{ step.caption | escape }}</figcaption>
+                {%- endif -%}
+              </figure>
+            {%- endif -%}
+            <div class="tut-step-body">{{ step.body | markdownify }}</div>
+            {%- if step.pitfall -%}
+              <p class="tut-pitfall"><strong>{% if zh %}这里最容易卡：{% else %}Where people get stuck: {% endif %}</strong>{{ step.pitfall | escape }}</p>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </section>
+
+      {%- comment -%} 区块4 失败点速查 {%- endcomment -%}
+      <section class="tut-block" id="troubleshooting">
+        <h2>{% if zh %}4. 失败点速查（8 条）{% else %}4. Troubleshooting (8 cases){% endif %}</h2>
+        <p class="tut-note">{% if zh %}这八条是我们真实遇到过的失败点，写在这里而不是藏着。先按现象找到最接近的一条，再按「先查什么」查。{% else %}These eight are real failures we hit. They are written down instead of hidden. Match your symptom first, then work through the check.{% endif %}</p>
+        <ol class="tut-trouble">
+          {%- for t in site.data.troubleshooting -%}
+            <li class="tut-trouble-item{% if t.status == 'placeholder' %} is-placeholder{% endif %}">
+              <h4>{% if zh %}{{ t.title | escape }}{% else %}{{ t.title_en | default: t.title | escape }}{% endif %}</h4>
+              <p class="tut-trouble-symptom"><span class="tut-tag">{% if zh %}现象{% else %}Symptom{% endif %}</span>{% if zh %}{{ t.symptom | escape }}{% else %}{{ t.symptom_en | default: t.symptom | escape }}{% endif %}</p>
+              <p class="tut-trouble-check"><span class="tut-tag">{% if zh %}先查什么{% else %}Check first{% endif %}</span>{% if zh %}{{ t.check | escape }}{% else %}{{ t.check_en | default: t.check | escape }}{% endif %}</p>
+            </li>
+          {%- endfor -%}
+        </ol>
+      </section>
+
+      {%- comment -%} 区块5 我们做什么 / 不做什么 {%- endcomment -%}
+      <section class="tut-block" id="scope">
+        <h2>{% if zh %}5. 我们做什么 / 不做什么{% else %}5. What we do / don't do{% endif %}</h2>
+        <div class="tut-scope">
+          <div class="tut-scope-col tut-scope-do">
+            <h3>{% if zh %}我们做什么{% else %}What we do{% endif %}</h3>
+            <ul>
+              <li>{% if zh %}设备连接{% else %}Device connection{% endif %}</li>
+              <li>{% if zh %}播放器安装{% else %}Player app install{% endif %}</li>
+              <li>{% if zh %}参数配置{% else %}Parameter setup{% endif %}</li>
+              <li>{% if zh %}导入设置{% else %}Import setup{% endif %}</li>
+              <li>{% if zh %}故障排查{% else %}Troubleshooting{% endif %}</li>
+            </ul>
+          </div>
+          <div class="tut-scope-col tut-scope-dont">
+            <h3>{% if zh %}我们不做什么{% else %}What we don't do{% endif %}</h3>
+            <p>{% if zh %}不提供、不存储、不转播任何节目内容。{% else %}We do not provide, store, or rebroadcast any program content.{% endif %}</p>
+          </div>
+        </div>
+      </section>
+
+      {{ content }}
+
+    </div>
+  </div>
+
+  {%- comment -%} 区块6 试用入口 {%- endcomment -%}
+  <section class="tut-block tut-cta" id="try">
+    <h2>{% if zh %}6. 7 天服务试用入口{% else %}6. 7-day service trial{% endif %}</h2>
+    <p class="tut-cta-line">{% if zh %}7 天服务试用{% else %}7-day service trial{% endif %}</p>
+    <p class="tut-cta-sub">{% if zh %}先试 {{ '<X天>' | escape }}，不满意不付费。{% else %}Try it for {{ '<X days>' | escape }} first. If it is not for you, you do not pay.{% endif %}</p>
+    <p class="tut-cta-btn">
+      <a class="cta-button" href="{{ page.trial_url | default: 'https://iptv-search.com/login?tab=register' | escape }}">{% if zh %}主站入口{% else %}Open the main site{% endif %} →</a>
+    </p>
+    <p class="tut-cta-note">{% if zh %}设备配置问题重做不额外收费。{% else %}Redoing a configuration problem costs nothing extra.{% endif %}</p>
+  </section>
+
+  {%- if page.comments_id -%}
+  <section class="comments-section">
+    <h2>{% if zh %}留言与提问{% else %}Comments &amp; questions{% endif %}</h2>
+    <p style="color: var(--fg-soft); font-size: 0.9rem;">{% if zh %}用 GitHub 账号登录即可留言，作者通常 1-2 天内回复。{% else %}Sign in with GitHub to leave a comment. The author replies within 1-2 days.{% endif %}</p>
+  </section>
+  {%- endif -%}
+</article>
+<script>
+  (function() {
+    var toc = document.getElementById('toc-list');
+    if (!toc) return;
+    var headings = document.querySelectorAll('.post-content h2, .post-content h3, article.tut > section.tut-block h2');
+    if (headings.length === 0) {
+      var aside = document.querySelector('.post-toc');
+      if (aside) aside.style.display = 'none';
+      return;
+    }
+    headings.forEach(function(h, i) {
+      if (!h.id) h.id = 'h-' + i;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      if (h.tagName === 'H3') a.style.paddingLeft = '0.85rem';
+      li.appendChild(a);
+      toc.appendChild(li);
+    });
+  })();
+</script>

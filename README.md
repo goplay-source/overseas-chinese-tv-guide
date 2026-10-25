@@ -29,6 +29,16 @@ This site walks through each scenario step by step, with the real 2026 prices, r
 
 Chinese versions of all five guides are also available in the [archive](https://goplay-source.github.io/overseas-chinese-tv-guide/archive/).
 
+### Setup guides
+
+Step-by-step device walkthroughs, one image per step, each step with the single place people get stuck.
+
+| Setup guide | Device |
+|-------------|--------|
+| [How to set up an M3U player on Fire TV Stick](https://goplay-source.github.io/overseas-chinese-tv-guide/2026/10/25/setup-fire-tv-stick-m3u-en.html) | Fire TV Stick / Fire TV |
+
+The Chinese version of this setup guide is available in the [archive](https://goplay-source.github.io/overseas-chinese-tv-guide/archive/).
+
 ## Site policies
 
 1. **No copyrighted material** is hosted on this site. All content is original, paid-for-our-wallet testing notes.
@@ -47,7 +57,7 @@ If you want to skip the manual M3U configuration described in every guide above,
 
 ### Try free for 7 days →
 
-Sign up at **[iptv-search.com/register](https://iptv-search.com/login?tab=register&utm_source=github-pages&utm_medium=readme&utm_campaign=overseas-chinese-tv-guide)** to get a 7-day VIP trial automatically. No payment required during the trial.
+Sign up at **[iptv-search.com/register](https://iptv-search.com/login?tab=register&ref=taobao&utm_source=github-pages&utm_medium=readme&utm_campaign=overseas-chinese-tv-guide)** to get a 7-day VIP trial automatically. No payment required during the trial.
 
 After the trial, the service is **$9.99/month** (3-month minimum) or **$59.88/year** (save 50%).
 

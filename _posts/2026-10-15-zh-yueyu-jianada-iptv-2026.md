@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 lang: zh-CN
 title: "2026 加拿大粤语用户中文电视方案对比"
@@ -150,7 +150,7 @@ Sling TV Jadeworld 需要 VPN + 跨区订阅，**不推荐加拿大家庭首选*
 
 **免费试用 7 天** — 试用期间不需付款。试用结束后服务 **$9.99/月**（最少 3 个月）或 **$59.88/年**（省 50%）。
 
-<p><a class="cta-button" href="https://iptv-search.com/login?tab=register&utm_source=github-pages&utm_medium=seo-article&utm_campaign=zh-yueyu-jianada-iptv-2026" target="_blank" rel="noopener">免费试用 7 天 →</a></p>
+<p><a class="cta-button" href="https://iptv-search.com/login?tab=register&ref=taobao&utm_source=github-pages&utm_medium=seo-article&utm_campaign=zh-yueyu-jianada-iptv-2026" target="_blank" rel="noopener">免费试用 7 天 →</a></p>
 
 注册后会自动获得订阅链接和 7 天 VIP 试用。
 
